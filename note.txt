@@ -1,0 +1,21 @@
+how to start :
+
+python3 app.py 
+/ first run this 
+
+redis-server
+/ then this in another terminal
+
+
+celery -A main:celery_app worker -l INFO
+/ then this in another terminal
+
+
+go/bin/MailHog
+/ then this in another terminal from root usually
+
+
+celery -A main:celery_app beat --loglevel=info
+/ run this also for crontab schedules to work
+
+
