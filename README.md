@@ -178,7 +178,7 @@ Household-Services-Application/
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/Viakya/Household-Services-Application.git
+git clone <repository-url>
 cd Household-Services-Application
 ```
 
@@ -239,9 +239,11 @@ The main configuration is located in `main.py`:
 
 ### Security Configuration
 ```python
-app.config['SECRET_KEY'] = "should-not-be-exposed"  # Change in production!
-app.config['SECURITY_PASSWORD_SALT'] = 'salty-password'  # Change in production!
+app.config['SECRET_KEY'] = "your-secret-key-here"  # IMPORTANT: Change this in production!
+app.config['SECURITY_PASSWORD_SALT'] = 'your-password-salt-here'  # IMPORTANT: Change this in production!
 ```
+
+> ⚠️ **Security Warning**: Never use default or example secret keys in production. Generate strong, random secrets using tools like `python -c "import secrets; print(secrets.token_hex(32))"`
 
 ### Database Configuration
 ```python
